@@ -178,6 +178,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
 
     int _actas = 0;
     int _hrTotal = _hrSemana1 + _hrSemana2 + _hrSemana3 + _hrSemana4;
+    int _hrExtraCounter = 0;
 
     if (_hrSemana1 < 27) {
       _actas = _actas + 1;
@@ -190,6 +191,22 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
     }
     if (_hrSemana4 < 27) {
       _actas = _actas + 1;
+    }
+
+    if (_hrSemana1 > 40) {
+      _hrExtraCounter = _hrSemana1 - 40;
+    }
+
+    if (_hrSemana2 > 40) {
+      _hrExtraCounter = _hrSemana2 - 40;
+    }
+
+    if (_hrSemana3 > 40) {
+      _hrExtraCounter = _hrSemana3 - 40;
+    }
+
+    if (_hrSemana4 > 40) {
+      _hrExtraCounter = _hrSemana4 - 40;
     }
 
     if (_actas == 1) {
@@ -213,7 +230,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
-                      'En una semana has trabajado menos de 27 horas. Por tanto, se te ha levantado una acta administrativa.'),
+                      'En una semana has trabajado menos de 27 horas. Por tanto, se le ha levantado una acta administrativa.'),
                   SizedBox(
                     height: 15.0,
                   ),
@@ -221,7 +238,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                   SizedBox(
                     height: 15.0,
                   ),
-                  Text('Salario total: $_salarioTotal MXN'),
+                  Text('Nomina: $_salarioTotal MXN'),
                   SizedBox(
                     height: 15.0,
                   ),
@@ -301,7 +318,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                   SizedBox(
                     height: 15.0,
                   ),
-                  Text('Salario total: $_salarioTotal MXN'),
+                  Text('Nomina: $_salarioTotal MXN'),
                   SizedBox(
                     height: 15.0,
                   ),
@@ -321,9 +338,9 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
             );
           });
     } else if (_hrTotal > 140) {
-      int _horasExtra = _hrTotal - 140;
+      // int _horasExtra = _hrTotal - 140;
       _salarioTotal =
-          (140 * _salarioPorHora) + (_horasExtra * _salarioPorHoraExtra);
+          (160 * _salarioPorHora) + (_hrExtraCounter * _salarioPorHoraExtra);
       showDialog(
           barrierDismissible: false,
           context: context,
@@ -344,11 +361,11 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                   SizedBox(
                     height: 15.0,
                   ),
-                  Text('Total de horas extra trabajadas: $_horasExtra'),
+                  Text('Total de horas extra trabajadas: $_hrExtraCounter'),
                   SizedBox(
                     height: 15.0,
                   ),
-                  Text('Salario total: $_salarioTotal MXN'),
+                  Text('Nomina: $_salarioTotal MXN'),
                   SizedBox(
                     height: 15.0,
                   ),
