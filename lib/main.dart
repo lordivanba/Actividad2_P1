@@ -1,8 +1,8 @@
 import 'package:actividad2/src/routes/routes.dart';
 import 'package:flutter/material.dart';
 
-// Universidad Tecnologica Metropolitana
-// Desarrollo movil multiplataforma
+// Escuela: Universidad Tecnologica Metropolitana
+// Asignatura: Desarrollo movil multiplataforma
 // Maestro: Ing. Joel I. Chuc
 // Actividad 2
 // Alumno: Ivan Israel Canto Salas
