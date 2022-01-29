@@ -34,7 +34,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
           children: [
             Center(
               child: Text(
-                'Calcular salario semanal',
+                'Calcular salario',
                 style: TextStyle(fontSize: 30.0, color: Colors.white),
               ),
             ),
@@ -165,7 +165,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0)),
                   padding:
-                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 25.0),
+                      EdgeInsets.symmetric(horizontal: 40.0, vertical: 20.0),
                   elevation: 10.0,
                   textStyle: TextStyle(fontSize: 18.0),
                 ),

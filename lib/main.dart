@@ -1,6 +1,14 @@
 import 'package:actividad2/src/routes/routes.dart';
 import 'package:flutter/material.dart';
 
+// Universidad Tecnologica Metropolitana
+// Desarrollo movil multiplataforma
+// Maestro: Ing. Joel I. Chuc
+// Actividad 2
+// Alumno: Ivan Israel Canto Salas
+// Quinto Cuatrimestre
+// Grupo A
+// Primer Parcial
 void main() {
   runApp(const MyApp());
 }

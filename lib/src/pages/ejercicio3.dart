@@ -22,7 +22,7 @@ class _Ejercicio3PageState extends State<Ejercicio3Page> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Ejercicio 2'),
+          title: Text('Ejercicio 3'),
           leading: IconButton(
               onPressed: () => Navigator.pushNamed(context, '/'),
               icon: Icon(Icons.keyboard_arrow_left)),
@@ -82,7 +82,10 @@ class _Ejercicio3PageState extends State<Ejercicio3Page> {
                   child: TextFormField(
                     keyboardType:
                         TextInputType.numberWithOptions(decimal: true),
-                    // inputFormatters: [FilteringTextInputFormatter.allow(filterPattern)],
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(
+                          RegExp(r'^\d+\.?\d{0,2}')),
+                    ],
                     decoration: InputDecoration(
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(20.0)),
