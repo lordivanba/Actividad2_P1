@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Ejercicio1Page extends StatefulWidget {
   Ejercicio1Page({Key? key}) : super(key: key);
@@ -24,7 +25,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
             onPressed: () {
               Navigator.pushNamed(context, '/');
             },
-            icon: Icon(Icons.arrow_back)),
+            icon: Icon(Icons.keyboard_arrow_left)),
       ),
       body: Form(
         key: _formKey,
@@ -34,7 +35,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
             Center(
               child: Text(
                 'Calcular salario semanal',
-                style: TextStyle(fontSize: 30.0, color: Colors.blue),
+                style: TextStyle(fontSize: 30.0, color: Colors.white),
               ),
             ),
             SizedBox(
@@ -44,6 +45,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
               padding: EdgeInsets.only(left: 80.0, right: 80.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                   border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20.0)),
@@ -68,6 +70,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
               padding: EdgeInsets.only(left: 80.0, right: 80.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)),
@@ -91,6 +94,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
               padding: EdgeInsets.only(left: 80.0, right: 80.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)),
@@ -114,6 +118,7 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
               padding: EdgeInsets.only(left: 80.0, right: 80.0),
               child: TextFormField(
                 keyboardType: TextInputType.number,
+                inputFormatters: [FilteringTextInputFormatter.digitsOnly],
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
                         borderRadius: BorderRadius.circular(20.0)),
@@ -145,6 +150,8 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
                 },
                 child: Text('Calcular'),
                 style: ElevatedButton.styleFrom(
+                  primary: Colors.white,
+                  onPrimary: Colors.black87,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(25.0)),
                   padding:
