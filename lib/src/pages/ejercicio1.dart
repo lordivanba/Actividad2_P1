@@ -30,12 +30,22 @@ class _Ejercicio1PageState extends State<Ejercicio1Page> {
       body: Form(
         key: _formKey,
         child: ListView(
-          padding: EdgeInsets.symmetric(vertical: 50.0),
+          padding: EdgeInsets.symmetric(vertical: 20.0),
           children: [
             Center(
               child: Text(
                 'Calcular salario semanal',
                 style: TextStyle(fontSize: 30.0, color: Colors.white),
+              ),
+            ),
+            SizedBox(height: 1.0),
+            Divider(),
+            Container(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Text(
+                'El salario por hora es de \$120 y el salario por hora extra es de \$175. Si las horas trabajadas son menores a 27 se debe desplegar un aviso indicando que se le va a levantar un acta administrativa, cuando el empleado acumule 2 actas administrativas se le debe informar de su despido. Después de 40 horas trabajadas se deben pagar horas extra.',
+                style: TextStyle(fontSize: 12.0, fontStyle: FontStyle.normal),
+                textAlign: TextAlign.left,
               ),
             ),
             SizedBox(

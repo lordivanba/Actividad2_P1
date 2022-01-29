@@ -26,12 +26,23 @@ class _Ejercicio2PageState extends State<Ejercicio2Page> {
         body: Form(
             key: _formKey,
             child: ListView(
-              padding: EdgeInsets.symmetric(vertical: 50.0),
+              padding: EdgeInsets.symmetric(vertical: 20.0),
               children: [
                 Center(
                   child: Text(
                     'Conversión a binario',
                     style: TextStyle(fontSize: 30.0, color: Colors.white),
+                  ),
+                ),
+                SizedBox(height: 10.0),
+                Divider(),
+                Container(
+                  padding: EdgeInsets.symmetric(horizontal: 25.0),
+                  child: Text(
+                    'Crear un programa en Dart que transforme un numero decimal a su equivalencia en binario, por ejemplo, si usamos el método de la división sucesiva para calcular el valor binario del número 12, comenzaremos dividiendo 12 entre 2, luego cada cociente resultante se divide por 2 hasta que se obtiene un cociente cuya parte entera es 0.',
+                    style:
+                        TextStyle(fontSize: 15.0, fontStyle: FontStyle.normal),
+                    textAlign: TextAlign.left,
                   ),
                 ),
                 SizedBox(

@@ -46,6 +46,9 @@ class HomePage extends StatelessWidget {
             ),
             trailing: Icon(Icons.keyboard_arrow_right),
             leading: Icon(Icons.task_alt),
+            onTap: () {
+              Navigator.pushNamed(context, 'ejercicio3');
+            },
           ),
           Divider(),
           ListTile(
